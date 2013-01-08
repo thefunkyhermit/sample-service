@@ -1,8 +1,7 @@
-package com.kixeye.api.resources;
+package com.aidangordon.api.resources;
 
-import com.kixeye.api.dao.TestDAO;
+import com.aidangordon.api.dao.TestDAO;
 import com.yammer.metrics.annotation.Timed;
-import org.skife.jdbi.v2.sqlobject.GetGeneratedKeys;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

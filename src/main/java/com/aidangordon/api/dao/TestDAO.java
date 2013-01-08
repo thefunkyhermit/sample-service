@@ -1,4 +1,4 @@
-package com.kixeye.api.dao;
+package com.aidangordon.api.dao;
 
 
 import org.skife.jdbi.v2.sqlobject.Bind;

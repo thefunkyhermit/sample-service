@@ -1,7 +1,6 @@
-package com.kixeye.api.resources;
+package com.aidangordon.api.resources;
 
-import com.kixeye.api.bean.SampleResult;
-import com.kixeye.api.dao.TestDAO;
+import com.aidangordon.api.bean.SampleResult;
 import com.yammer.metrics.annotation.Timed;
 
 import javax.ws.rs.GET;

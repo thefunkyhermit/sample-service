@@ -1,4 +1,4 @@
-package com.kixeye.api.bean;
+package com.aidangordon.api.bean;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.kixeye.api.resources
+package com.aidangordon.api.resources
 
 import javax.ws.rs.Path
 import javax.ws.rs.GET
