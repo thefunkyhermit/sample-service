@@ -4,6 +4,7 @@ package com.kixeye.api;
 import com.kixeye.api.config.SampleServiceConfiguration;
 import com.kixeye.api.dao.TestDAO;
 import com.kixeye.api.resources.DBSampleResource;
+import com.kixeye.api.resources.GroovyResource;
 import com.kixeye.api.resources.SampleResource;
 import com.yammer.dropwizard.Service;
 import com.yammer.dropwizard.config.Bootstrap;
@@ -31,5 +32,6 @@ public class SampleService extends Service<SampleServiceConfiguration> {
         final TestDAO dao = jdbi.onDemand(TestDAO.class);
         environment.addResource(new SampleResource());
         environment.addResource(new DBSampleResource(dao));
+        environment.addResource(new GroovyResource());
     }
 }
