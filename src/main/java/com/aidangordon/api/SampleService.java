@@ -1,12 +1,15 @@
 package com.aidangordon.api;
 
 
+import com.aidangordon.api.auth.ExampleAuthenticator;
+import com.aidangordon.api.bean.User;
 import com.aidangordon.api.config.SampleServiceConfiguration;
 import com.aidangordon.api.dao.TestDAO;
 import com.aidangordon.api.resources.DBSampleResource;
 import com.aidangordon.api.resources.GroovyResource;
 import com.aidangordon.api.resources.SampleResource;
 import com.yammer.dropwizard.Service;
+import com.yammer.dropwizard.auth.oauth.OAuthProvider;
 import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;
 import com.yammer.dropwizard.jdbi.DBIFactory;
@@ -32,5 +35,7 @@ public class SampleService extends Service<SampleServiceConfiguration> {
         environment.addResource(new SampleResource());
         environment.addResource(new DBSampleResource(dao));
         environment.addResource(new GroovyResource());
+
+        environment.addProvider(new OAuthProvider<User>(new ExampleAuthenticator(), "SECRET SAUCE"));
     }
 }
